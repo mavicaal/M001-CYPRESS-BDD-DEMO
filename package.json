@@ -1,0 +1,25 @@
+{
+  "name": "m001-cypress-bdd-demo",
+  "version": "1.0.0",
+  "description": "This a demonstration of my skills in cypress framework",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^13.11.0"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.12.44"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavicaal/M001-CYPRESS-BDD-DEMO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mavicaal/M001-CYPRESS-BDD-DEMO/issues"
+  },
+  "homepage": "https://github.com/mavicaal/M001-CYPRESS-BDD-DEMO#readme"
+}
