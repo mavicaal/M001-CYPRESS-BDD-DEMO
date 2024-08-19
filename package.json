@@ -4,7 +4,9 @@
   "description": "This a demonstration of my skills in cypress framework",
   "main": "index.js",
   "dependencies": {
-    "cypress": "^13.11.0"
+    "cypress": "^13.11.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "save-dev": "0.0.1-security"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.12.44"
@@ -21,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/mavicaal/M001-CYPRESS-BDD-DEMO/issues"
   },
-  "homepage": "https://github.com/mavicaal/M001-CYPRESS-BDD-DEMO#readme"
+  "homepage": "https://github.com/mavicaal/M001-CYPRESS-BDD-DEMO#readme",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/step_definitions"
+  }
 }
