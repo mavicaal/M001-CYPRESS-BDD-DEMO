@@ -23,3 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("verifyErrorMsgVisibility", (msg) => {
+  cy.contains(msg).should("be.visible");
+});

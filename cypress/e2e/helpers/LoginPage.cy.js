@@ -1,8 +1,4 @@
 class LoginPage {
-  enterURL() {
-    cy.visit("https://www.saucedemo.com/");
-  }
-
   enterEmailPassword(username, password) {
     cy.get('input[id="user-name"]').clear().type(username);
     cy.get('input[id="password"]').clear().type(password);
@@ -30,13 +26,6 @@ class LoginPage {
 
   verifyLoginPageIsDisplayed() {
     cy.get('[data-test="login-container"]').should("be.visible");
-    return this;
-  }
-
-  verifyLockedOutErrorIsDisplayed() {
-    cy.contains("Epic sadface: Sorry, this user has been locked out.").should(
-      "be.visible"
-    );
     return this;
   }
 }
