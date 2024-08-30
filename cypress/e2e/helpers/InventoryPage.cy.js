@@ -46,14 +46,23 @@ class InventoryPage {
       })
       .then(() => {
         items_r = [...items];
-        if (direction == "Ascending") {
-          expect(items).to.deep.equal(items_r.sort().reverse());
-        } else if (direction == "Descending") {
-          expect(items).to.deep.equal(items_r.sort());
+        if (direction == "Descending") {
+          expect(items).to.deep.equal(
+            items_r
+              .sort(function (a, b) {
+                return a - b;
+              })
+              .reverse()
+          );
+        } else if (direction == "Ascending") {
+          expect(items).to.deep.equal(
+            items_r.sort(function (a, b) {
+              return a - b;
+            })
+          );
         } else {
           throw new Error("No valid sort type found");
         }
-        cy.log(items);
       });
     return this;
   }
