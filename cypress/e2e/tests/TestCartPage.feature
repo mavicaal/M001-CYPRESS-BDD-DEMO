@@ -22,7 +22,7 @@ Feature: Adding inventory items to the cart
         When User add "sauce-labs-backpack" item to the cart
         And User clicks the cart logo
         And Item "sauce-labs-backpack" "is" displayed
-        And User clicks on continue shopping option
+        And User clicks on "Continue Shopping" cart button
         And User removes "sauce-labs-backpack" item from "Inventory Page"
         And User clicks the cart logo
         Then Item "sauce-labs-backpack" "is not" displayed
