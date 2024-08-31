@@ -1,6 +1,6 @@
 Feature: Users interaction with inventory page
     Background: Navigate to the Website
-        Given User navigate to the "SauceDemo Home Page"
+        Given User navigates to the "SauceDemo Home Page"
         And  "standard_user" user log in
 
     Scenario: User can sort the products by name alphabeticaly ascending
