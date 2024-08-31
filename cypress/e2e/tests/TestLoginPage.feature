@@ -1,9 +1,9 @@
 Feature: Login into SauceDemo site with different users
     Background: Navigate to the Website
-        Given I navigate to the "SauceDemo Home Page"
+        Given User navigates to the "SauceDemo Home Page"
 
     Scenario: Navigate to the Inventory Page without logged user
-        When I navigate to the "SauceDemo Inventory Page"
+        When User navigates to the "SauceDemo Inventory Page"
         Then "Log in Access Need Error" is displayed
 
     Scenario: Success login into the application with standard user

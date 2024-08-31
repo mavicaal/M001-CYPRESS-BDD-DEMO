@@ -1,7 +1,7 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import login from "../helpers/LoginPage.cy";
 
-Given("User navigate to the {string}", (website) => {
+Given("User navigates to the {string}", (website) => {
   switch (website) {
     case "SauceDemo Home Page":
       cy.visit("https://www.saucedemo.com/");
