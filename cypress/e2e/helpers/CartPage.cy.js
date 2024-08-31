@@ -21,9 +21,9 @@ class CartPage {
     cy.get('div[data-test="cart-contents-container"]').within(() => {
       if (visibility == "is")
         cy.get(`button[data-test="${remove_data_test}"]`).should("be.visible");
-      else if (visibility == "is not") {
+      else if (visibility == "is not")
         cy.get(`button[data-test="${remove_data_test}"]`).should("not.exist");
-      }
+      else throw Error("No valid visibillity option");
     });
     return this;
   }
@@ -52,9 +52,13 @@ class CartPage {
     return this;
   }
 
-  clicksContinueShoppingOption() {
+  clicksOnCartButton(button) {
     cy.get('div[data-test="cart-contents-container"]').within(() => {
-      cy.get('button[data-test="continue-shopping"]').click();
+      if (button == "Continue Shopping")
+        cy.get('button[data-test="continue-shopping"]').click();
+      else if (button == "Checkout")
+        cy.get('button[data-test="checkout"]').click();
+      else throw Error("No valid button option");
     });
     return this;
   }
