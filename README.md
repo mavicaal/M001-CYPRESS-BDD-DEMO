@@ -9,3 +9,7 @@ This a demonstration of my skills in cypress framework
    ´´´npm install cypress@13.11.0´´´
 3. Install Cucumber package
    ´´´npm install save-dev cypress-cucumber-preprocessor´´´
+
+# NOTES
+
+1.  chromeWebSecurity: false, param was added in cypress.config.js to avoid error related chrome pop up when running tests

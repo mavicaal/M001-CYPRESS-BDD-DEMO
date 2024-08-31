@@ -1,49 +1,32 @@
 class LoginPage {
-  enterURL() {
-    cy.visit("https://testgrid.io/");
-  }
-
-  clickSignInLink() {
-    cy.get('[title="Sign in"]').click();
-    return this;
-  }
-
   enterEmailPassword(username, password) {
-    cy.get("#email").clear().type(username);
-    cy.get("#password").clear().type(password);
+    cy.get('input[id="user-name"]').clear().type(username);
+    cy.get('input[id="password"]').clear().type(password);
     return this;
   }
 
-  clickSignButton() {
-    cy.get(".signin-button").click();
+  clickLoginButton() {
+    cy.get('input[id="login-button"]').click();
     return this;
   }
 
-  verifyPageTitle() {
-    return cy
-      .title()
-      .should(
-        "eq",
-        "TestGrid | The Cloud Based Mobile Automated Testing Platform on Real iOS and Android Devices"
-      );
+  verifyInventoryPageIsDisplayed() {
+    cy.url().should("eq", "https://www.saucedemo.com/inventory.html");
+    cy.get('[data-test="secondary-header"]').within(() => {
+      cy.contains("Products");
+    });
+    return this;
   }
 
-  verifyUserLoggedIn() {
-    return cy.contains("Dashboard");
-  }
-
-  verifyCodelessLink() {
-    return cy.get("#tgtestcase").click();
-  }
-
-  verifyCodelessLinkOpen() {
-    return cy.contains("Lets get you started with codeless automation");
-  }
-
-  clickLogoutLink() {
-    cy.get("[data-toggle='dropdown']").click();
+  clickLogoutOption() {
+    cy.get('button[id="react-burger-menu-btn"]').click();
     cy.contains("Logout").click();
-    return;
+    return this;
+  }
+
+  verifyLoginPageIsDisplayed() {
+    cy.get('[data-test="login-container"]').should("be.visible");
+    return this;
   }
 }
 
