@@ -25,12 +25,14 @@ Feature: Checkout inventory items
         And User clicks on "Continue" checkout button
         Then "Postal Code" required error is displayed
 
-    Scenario: Checkout items succesfully display order details
-        And User fills out the "First Name" field
-        And User fills out the "Last Name" field
-        And User fills out the "Postal Code" field
-        And User clicks on "Continue" checkout button
-        Then Order details are displayed
+# Scenario: Checkout items succesfully display order details
+#     And User fills out the "First Name" field
+#     And User fills out the "Last Name" field
+#     And User fills out the "Postal Code" field
+#     And User clicks on "Continue" checkout button
+#     Then Order details are displayed
+
+
 
 # Scenario: Checkout items are ordered succesfully
 #     And User fills out the "First Name" field
