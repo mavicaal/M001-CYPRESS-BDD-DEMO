@@ -2,6 +2,6 @@
     "inputs": {
         "firstName":"testFirstName",
         "lastName": "testLastName",
-        "zip_code": "testZipCode"
+        "postalCode": "testPostalCode"
     }
 }
