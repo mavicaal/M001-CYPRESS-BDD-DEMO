@@ -15,4 +15,6 @@ Then("{string} required error is displayed", (input) => {
   checkout.validateErrorMsgForInputs(input);
 });
 
-Then("Order details are displayed", () => {});
+Then("{string} order details are displayed", (item) => {
+  checkout.validateOrderDetailsAreDisplayed(item);
+});

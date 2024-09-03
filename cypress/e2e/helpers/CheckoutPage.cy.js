@@ -31,7 +31,25 @@ class CheckoutPage {
     cy.verifyErrorMsgVisibility(`Error: ${input} is required`);
   }
 
-  validateOrderDetailsAreDisplayed() {}
+  validateOrderDetailsAreDisplayed(item) {
+    cy.get('div[data-test="checkout-summary-container"]').within(() => {
+      cy.contains(item)
+        .parent()
+        .parent()
+        .within(() => {
+          cy.get('div[data-test="inventory-item-price"]')
+            .invoke("text")
+            .as("item_text");
+        });
+      cy.get('div[data-test="subtotal-label"]').invoke("text").as("sub_text");
+      cy.get("@item_text").then(($text) => {
+        cy.get("@sub_text").should("contain", $text);
+      });
+      cy.get('div[data-test="payment-info-label"]').should("be.visible");
+      cy.get('div[data-test="shipping-info-label"]').should("be.visible");
+      cy.get('div[data-test="total-info-label"]').should("be.visible");
+    });
+  }
 }
 
 const checkout = new CheckoutPage();
