@@ -32,13 +32,11 @@ Feature: Checkout inventory items
         And User clicks on "Continue" checkout button
         Then "Sauce Labs Backpack" order details are displayed
 
-
-
-# Scenario: Checkout items are ordered succesfully
-#     And User fills out the "First Name" field
-#     And User fills out the "Last Name" field
-#     And User fills out the "Postal Code" field
-#     And User clicks the "Continue" checkout button
-#     And User clicks the "Finish" checkout button
-#     Then Success order msg is displayed
+    Scenario: Checkout items are ordered succesfully
+        And User fills out the "First Name" field
+        And User fills out the "Last Name" field
+        And User fills out the "Postal Code" field
+        And User clicks on "Continue" checkout button
+        And User clicks on "Finish" checkout button
+        Then Success order msg is displayed
 

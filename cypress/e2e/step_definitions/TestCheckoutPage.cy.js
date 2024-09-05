@@ -18,3 +18,7 @@ Then("{string} required error is displayed", (input) => {
 Then("{string} order details are displayed", (item) => {
   checkout.validateOrderDetailsAreDisplayed(item);
 });
+
+Then("Success order msg is displayed", () => {
+  checkout.validateCheckoutComplete();
+});

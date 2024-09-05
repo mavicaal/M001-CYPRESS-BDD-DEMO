@@ -50,6 +50,12 @@ class CheckoutPage {
       cy.get('div[data-test="total-info-label"]').should("be.visible");
     });
   }
+
+  validateCheckoutComplete() {
+    cy.get('div[data-test="checkout-complete-container"]').within(() => {
+      cy.verifyErrorMsgVisibility("Thank you for your order!");
+    });
+  }
 }
 
 const checkout = new CheckoutPage();
