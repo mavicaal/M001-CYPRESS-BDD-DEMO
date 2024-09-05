@@ -1,0 +1,7 @@
+{
+    "inputs": {
+        "firstName":"testFirstName",
+        "lastName": "testLastName",
+        "postalCode": "testPostalCode"
+    }
+}

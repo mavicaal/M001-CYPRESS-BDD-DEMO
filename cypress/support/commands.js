@@ -27,3 +27,9 @@
 Cypress.Commands.add("verifyErrorMsgVisibility", (msg) => {
   cy.contains(msg).should("be.visible");
 });
+
+Cypress.Commands.add("loadJson", (filePath) => {
+  cy.readFile(filePath).then((data) => {
+    return data;
+  });
+});

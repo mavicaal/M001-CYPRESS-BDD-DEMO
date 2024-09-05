@@ -9,8 +9,8 @@ When("User clicks the cart logo", () => {
   cart.clicksCartLogo();
 });
 
-When("User clicks on continue shopping option", () => {
-  cart.clicksContinueShoppingOption();
+When("User clicks on {string} cart button", (button) => {
+  cart.clicksOnCartButton(button);
 });
 
 When("User removes {string} item from {string}", (item, page) => {
