@@ -2,7 +2,7 @@
 
 This a demonstration of my skills in cypress framework
 
-# STEPS TO INITIALZIE THE PROJECT
+# STEPS TO INITIALIZE THE PROJECT
 
 1. Install nodejs and the npm package
 2. Install Cypress to the latest stable version
